@@ -24,6 +24,7 @@ export default class App extends Component {
         <Field flagged/>
         <Field flagged opened/>
 
+
       </View>
     );
   }
