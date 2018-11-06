@@ -8,6 +8,7 @@ const createBoard = (rows, columns) => {
                 opened: false, // se está aberto
                 flagged: false, // se está com flag
                 mined: false, // se está com mina
+                nearMines: 0, // minas proximas
             }
         })
     })
@@ -31,7 +32,7 @@ const spreadMines = (board, minesAmount) => {
 }
 
 // Cria uma tabuleiro já com as minas plantadas
-const createMinedBoard = (row, columns, minesAmount) => {
+const createMinedBoard = (rows, columns, minesAmount) => {
     const board = createBoard(rows,columns);
     spreadMines(board, minesAmount)
     return board
