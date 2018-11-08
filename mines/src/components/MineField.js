@@ -9,7 +9,7 @@ export default props => {
             // Field é referente ao objeto criado em createBoard
             // Ele pega os atributos do objeto e coloca dentro do componente Field
             // Exemplo de como adicionar props dentro dos components através do map
-            return <Field {...field} key={c}/>
+            return <Field {...field} key={c} onOpen={() => props.onOpenField(r, c)}/>
         })
         return <View key={r}>{columns}</View>
     })
